@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, LGH_blog">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="单链表之头插法和尾插法详解（C语言版）, LGH_blog">
+    <meta name="description" content="头插法核心代码：head-&amp;gt;next = NULL;s-&amp;gt;next = head-&amp;gt;next;head-&amp;gt;next = s;
+单个结点
+原始状态
+第一个元素插入的过程（注意：1和2的顺序不能颠倒，不然会导致链表缺失）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +22,7 @@
 
     
 
-    <title>Hello World | LGH_blog</title>
+    <title>单链表之头插法和尾插法详解（C语言版） | LGH_blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">单链表之头插法和尾插法详解（C语言版）</h1>
                 </div>
             </div>
         </div>
@@ -442,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-08
+                    2022-05-10
                 </div>
                 
 
@@ -451,14 +454,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    893
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -478,19 +481,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="头插法"><a href="#头插法" class="headerlink" title="头插法"></a>头插法</h1><p>核心代码：<br>head-&gt;next = NULL;<br>s-&gt;next = head-&gt;next;<br>head-&gt;next = s;</p>
+<p>单个结点<br><img src="https://img-blog.csdnimg.cn/20210527190102687.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<p>原始状态<br><img src="https://img-blog.csdnimg.cn/20210525231312227.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<p>第一个元素插入的过程（注意：1和2的顺序不能颠倒，不然会导致链表缺失）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210525231358801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"><br>第一个元素插入后<br><img src="https://img-blog.csdnimg.cn/20210527104348204.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<p>第二个元素插入的过程（其余元素插入的过程也类似）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210525231416277.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"><br>第二个元素插入后</p>
+<p><img src="https://img-blog.csdnimg.cn/20210527104629294.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<h1 id="尾插法"><a href="#尾插法" class="headerlink" title="尾插法"></a>尾插法</h1><p>核心代码：<br>tail = head;<br>s-&gt;next = NULL;<br>tail-&gt;next = s;<br>tail = s;</p>
+<p> 原始状态<br> <img src="https://img-blog.csdnimg.cn/20210525231439859.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<p>第一个元素插入的过程（注意：2和3的顺序不能颠倒，不然会导致链表的生成出错）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210525231453394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"><br>第一个元素插入后<br><img src="https://img-blog.csdnimg.cn/20210527104912241.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<p>第二个元素插入的过程（其余元素插入的过程也类似）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210525231506685.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"><br>第二个元素插入后<br><img src="https://img-blog.csdnimg.cn/20210527105127951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<h1 id="头插法和尾插法的对比"><a href="#头插法和尾插法的对比" class="headerlink" title="头插法和尾插法的对比"></a>头插法和尾插法的对比</h1><p>头插法建立链表的算法简短易懂，但是生成链表的结点顺序与原来输入的顺序相反，而用尾插法建立链表可使输入和生成的结点顺序相同</p>
+<p><strong>为什么会这样呢？</strong><br>根据上面的头插法和尾插法的算法，我们很容易知道，当用<strong>头插法</strong>依次插入值分别为1,2,3,4,5的结点（也叫做元素）后，单链表会如下图所示：<br><img src="https://img-blog.csdnimg.cn/20210527191947873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"></p>
+<p>但是用<strong>尾插法</strong>同样插入值分别为1,2,3,4,5的结点后，单链表却会如下图所示：<br><img src="https://img-blog.csdnimg.cn/20210527191734786.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyNjA3ODM0,size_16,color_FFFFFF,t_70"><br>而在这两个链表中，<strong>输出链表中各个元素的值只能从已知的头结点head开始遍历，所以分别用头插法和尾插法创建链表后，依次输出的元素的值刚好是相反的</strong></p>
+<hr>
+<p>验证小例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;malloc.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">next</span>;</span></span><br><span class="line">	<span class="type">int</span> data;</span><br><span class="line"> &#125;LinkList; </span><br><span class="line"> <span class="comment">//定义LinkList为struct node类型，即struct node可直接用LinkList来表示，方便定义</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">//头插法创建单链表 </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i, len = <span class="number">5</span>;</span><br><span class="line"><span class="comment">//len表示链表的长度	</span></span><br><span class="line">	LinkList* head, * s;</span><br><span class="line"><span class="comment">//head为LinkList*类型的指针变量，表示头指针</span></span><br><span class="line">	head = (LinkList*)<span class="built_in">malloc</span> (<span class="keyword">sizeof</span> (LinkList));</span><br><span class="line"><span class="comment">//malloc (sizeof (LinkList))意思是让系统分配内存大小为sizeof (LinkList)的空间</span></span><br><span class="line">	head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"><span class="comment">//令头指针的所指向结点的指针域为空</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		s = (LinkList*)<span class="built_in">malloc</span> (<span class="keyword">sizeof</span> (LinkList));</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">&quot;请输入该元素的值:&quot;</span>);</span><br><span class="line">		<span class="built_in">scanf</span> (<span class="string">&quot;%d&quot;</span>, &amp;s-&gt;data);</span><br><span class="line">		s-&gt;next = head-&gt;next;</span><br><span class="line">		head-&gt;next = s;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//以下代码是为了将单链表中各个元素的值依次打印出来	</span></span><br><span class="line">	LinkList* q;</span><br><span class="line">	q = (LinkList*)<span class="built_in">malloc</span> (<span class="keyword">sizeof</span> (LinkList));</span><br><span class="line">	q = head-&gt;next;</span><br><span class="line">	<span class="keyword">while</span> (q != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">&quot;%d&quot;</span>, q-&gt;data);</span><br><span class="line">		q = q-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果:<br>请输入该元素的值:1<br>请输入该元素的值:2<br>请输入该元素的值:3<br>请输入该元素的值:4<br>请输入该元素的值:5<br>54321</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;malloc.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">next</span>;</span></span><br><span class="line">	<span class="type">int</span> data;</span><br><span class="line"> &#125;LinkList; </span><br><span class="line"> </span><br><span class="line"><span class="comment">//尾插法创建单链表</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i, len = <span class="number">5</span>;</span><br><span class="line">	LinkList* head,* s,* tail;</span><br><span class="line"><span class="comment">//tail表示尾指针	</span></span><br><span class="line">	head = (LinkList*)<span class="built_in">malloc</span> (<span class="keyword">sizeof</span> (LinkList));</span><br><span class="line">	tail = head;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		s = (LinkList*)<span class="built_in">malloc</span> (<span class="keyword">sizeof</span> (LinkList));</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">&quot;请输入该元素的值：&quot;</span>);</span><br><span class="line">		<span class="built_in">scanf</span> (<span class="string">&quot;%d&quot;</span>, &amp;s-&gt;data); </span><br><span class="line">		s-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">		tail-&gt;next = s;</span><br><span class="line">		tail = s;</span><br><span class="line">    &#125;</span><br><span class="line"> <span class="comment">//以下代码是将单链表中各个元素的值依次打印出来   </span></span><br><span class="line">    LinkList* q;</span><br><span class="line">    q = head-&gt;next;</span><br><span class="line">    <span class="keyword">while</span> (q != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="built_in">printf</span> (<span class="string">&quot;%d&quot;</span>, q-&gt;data);</span><br><span class="line">    	q = q-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
+<p>结果：<br>请输入该元素的值：1<br>请输入该元素的值：2<br>请输入该元素的值：3<br>请输入该元素的值：4<br>请输入该元素的值：5<br>12345</p>
 
                 
             </div>
@@ -517,7 +530,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/05/08/hello-world/">http://example.com/2022/05/08/hello-world/</a>
+                    <a href="http://example.com/2022/05/10/%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%B4%E6%8F%92%E6%B3%95%E5%92%8C%E5%B0%BE%E6%8F%92%E6%B3%95%E8%AF%A6%E8%A7%A3%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/">http://example.com/2022/05/10/%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%B4%E6%8F%92%E6%B3%95%E5%92%8C%E5%B0%BE%E6%8F%92%E6%B3%95%E8%AF%A6%E8%A7%A3%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -748,62 +761,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/05/09/peter/">
+                <a href="/2022/05/10/%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%B4%E6%8F%92%E6%B3%95%E5%92%8C%E5%B0%BE%E6%8F%92%E6%B3%95%E8%AF%A6%E8%A7%A3%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="peter发动森东风东发动">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="单链表之头插法和尾插法详解（C语言版）">
                         
-                        <span class="card-title">peter发动森东风东发动</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-09
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Demetrius
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/ES6/">
-                        <span class="chip bg-color">ES6</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/05/08/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">单链表之头插法和尾插法详解（C语言版）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -814,7 +783,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Demetrius
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/10/%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%B4%E6%8F%92%E6%B3%95%E5%92%8C%E5%B0%BE%E6%8F%92%E6%B3%95%E8%AF%A6%E8%A7%A3%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="单链表之头插法和尾插法详解（C语言版）">
+                        
+                        <span class="card-title">单链表之头插法和尾插法详解（C语言版）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-10
                             </span>
                         <span class="publish-author">
                             
@@ -1012,7 +1019,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">97</span>
+                        class="white-color">893</span>
             
             
             
