@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LGH_blog">
+    <meta name="keywords" content="标签: C语言, LGH_blog">
     <meta name="description" content="LGH_blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
 
     
 
-    <title>LGH_blog</title>
+    <title>标签: C语言 | LGH_blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -305,56 +305,9 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item  white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -397,164 +350,54 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-
-
-    <a href="mailto:2285190803@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2285190803" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2285190803" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;座右铭
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            种一棵树最好的时间是十年前，其次就是现在
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/C%E8%AF%AD%E8%A8%80/" title="C语言: 7">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="C语言" style="background-color: #F9EBEA;">C语言
+                        <span class="tag-length">7</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/" title="单链表: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="单链表" style="background-color: #F5EEF8;">单链表
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+            </div>
         </div>
     </div>
 </div>
 
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
     
 
-    
-
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="C语言, 单链表" data-aos="fade-up">
                 <div class="card">
                     <a href="/2022/05/15/%E5%88%A0%E9%99%A4%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B8%AD%E6%89%80%E6%9C%89%E5%80%BC%E4%B8%BAx%E7%9A%84%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="删除单链表中所有值为x的数据元素">
@@ -562,13 +405,7 @@
                             <span class="card-title">删除单链表中所有值为x的数据元素</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                算法思路：==定义两个指针r与p，其中让p指针始终在r指针的前面==,即p = r-&gt;next 。让两个指针在链表中从头结点开始移动，如果p指针所指向结点的数据域的值与给定的值x相等,就要删除 。因为指针r指向该结点的前驱结点，所以我
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
@@ -581,29 +418,14 @@
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                            <span class="chip bg-color">C语言</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/">
-                            <span class="chip bg-color">单链表</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="C语言" data-aos="fade-up">
                 <div class="card">
                     <a href="/2022/05/15/putchar%E5%92%8Cgetchar%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="putchar和getchar函数的使用">
@@ -611,14 +433,7 @@
                             <span class="card-title">putchar和getchar函数的使用</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                putchar函数的三种用法（1）若putchar的括号里面是==用单引号括起来的单个字符==，则输出结果就是该字符
-1234567# include &lt;stdio.h&gt;int main (void)&#123;	putchar
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
@@ -631,25 +446,14 @@
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                            <span class="chip bg-color">C语言</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="C语言" data-aos="fade-up">
                 <div class="card">
                     <a href="/2022/05/15/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%BB%A5%E5%8F%8A%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="哈夫曼树">
@@ -657,15 +461,7 @@
                             <span class="card-title">哈夫曼树</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                @TOC
-哈夫曼树哈夫曼树的定义 哈夫曼树又称为最优二叉树，它是由n个带权值的叶子结点所构成的所有二叉树中==带权路径长度==最小的二叉树 (树的带权路径长度：树中所有叶子结点的权值乘以相应的树根结点的路径长度之和)
- 例如：对于权值分别为
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
@@ -678,25 +474,14 @@
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                            <span class="chip bg-color">C语言</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="C语言" data-aos="fade-up">
                 <div class="card">
                     <a href="/2022/05/15/%E9%9D%99%E6%80%81%E6%9F%A5%E6%89%BE%E8%A1%A8%EF%BC%88%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%EF%BC%8C%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%8C%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE%EF%BC%89/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="静态查找表">
@@ -704,18 +489,7 @@
                             <span class="card-title">静态查找表</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                @TOC
-顺序查找（又称为线性查找）
-顺序查找的线性表定义如下：
-
-1234typedef struct&#123;	int key;&#125;Search;
-顺序查找的算法思想：==将顺序表中数据元素存放在数组下标为1到n的位置上，而下
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
@@ -728,25 +502,14 @@
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                            <span class="chip bg-color">C语言</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="C语言" data-aos="fade-up">
                 <div class="card">
                     <a href="/2022/05/15/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%E8%AF%A6%E8%A7%A3%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="二叉树的层次遍历详解">
@@ -754,15 +517,7 @@
                             <span class="card-title">二叉树的层次遍历详解</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                什么是层次遍历呢？按照我的理解，==层次遍历就是从上到下，从左往右，一层层的遍历==如下图，层次遍历的结果是：ABCDEF
-
-图片来源于https://blog.csdn.net/hansionz/article/details/81947
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
@@ -775,25 +530,14 @@
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                            <span class="chip bg-color">C语言</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="C语言" data-aos="fade-up">
                 <div class="card">
                     <a href="/2022/05/15/C%E8%AF%AD%E8%A8%80%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E7%AE%97%E6%9C%AF%EF%BC%8C%E5%85%B3%E7%B3%BB%EF%BC%8C%E9%80%BB%E8%BE%91%EF%BC%8C%E8%B5%8B%E5%80%BC%EF%BC%8C%E8%87%AA%E5%A2%9E%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%8C%20%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%8C%E9%80%97%E5%8F%B7%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="C语言运算符">
@@ -801,16 +545,7 @@
                             <span class="card-title">C语言运算符</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                @TOC
-（1）算术运算符  ＋(加),  －(减) ,   *(乘)  ,   /(除) ,   %(求余)
-除法运算的注意事项
-被除数和除数都是int类型，则商一定是整数（原因：如果商是小数，结果会自动舍去小数点后面的数字）例如：  1
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
@@ -823,25 +558,14 @@
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                            <span class="chip bg-color">C语言</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="C语言, 单链表" data-aos="fade-up">
                 <div class="card">
                     <a href="/2022/05/10/%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%B4%E6%8F%92%E6%B3%95%E5%92%8C%E5%B0%BE%E6%8F%92%E6%B3%95%E8%AF%A6%E8%A7%A3%EF%BC%88C%E8%AF%AD%E8%A8%80%E7%89%88%EF%BC%89/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="单链表之头插法和尾插法详解（C语言版）">
@@ -849,16 +573,7 @@
                             <span class="card-title">单链表之头插法和尾插法详解（C语言版）</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                头插法核心代码：head-&gt;next = NULL;s-&gt;next = head-&gt;next;head-&gt;next = s;
-单个结点
-原始状态
-第一个元素插入的过程（注意：1和2的顺序不能颠倒，不然会导致链表缺失）
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-05-10
@@ -871,27 +586,11 @@
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                            <span class="chip bg-color">C语言</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/">
-                            <span class="chip bg-color">单链表</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
         </div>
     </article>
-
 </main>
 
 
